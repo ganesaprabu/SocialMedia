@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 public class User {
 	
 	private Integer id;
-	@Size(min = 4)
+	@Size(min = 4, message = "Name should have 4 charecters")
 	private String name;
 	@Past
 	private Date dob;

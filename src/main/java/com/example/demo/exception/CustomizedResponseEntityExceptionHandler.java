@@ -1,4 +1,4 @@
-package com.example.demo.user.exception;
+package com.example.demo.exception;
 
 import java.util.Date;
 

@@ -1,16 +1,25 @@
 package com.example.demo.user;
 
+import java.util.Date;
+
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
 public class User {
+	
 	private Integer id;
+	@Size(min = 4)
 	private String name;
+	@Past
+	private Date dob;
 	
-	
-	
-	public User(Integer id, String name) {
+	public User(Integer id, String name, Date dob) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.dob = dob;
 	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -23,5 +32,15 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public Date getDob() {
+		return dob;
+	}
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+	
+	
+	
+	
 	
 }

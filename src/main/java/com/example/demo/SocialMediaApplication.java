@@ -10,7 +10,4 @@ public class SocialMediaApplication {
 		System.out.println("GIT");
 		SpringApplication.run(SocialMediaApplication.class, args);
 	}
-
-	
-	
 }

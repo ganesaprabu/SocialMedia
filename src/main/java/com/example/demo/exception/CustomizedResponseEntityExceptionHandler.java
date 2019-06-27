@@ -14,12 +14,14 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestController
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler{
 
+	//This is to handle all the Exception
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity handleAllException(Exception ex, WebRequest request) throws Exception {
 		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
 		return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
+	//This is specific only to UserNotFoundException 
 	@ExceptionHandler(UserNotFoundException.class)
 	public ResponseEntity handleUserException(Exception ex, WebRequest request) throws Exception {
 		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));

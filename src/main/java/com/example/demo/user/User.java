@@ -13,6 +13,10 @@ public class User {
 	@Past
 	private Date dob;
 	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public User(Integer id, String name, Date dob) {
 		super();
 		this.id = id;

@@ -2,6 +2,7 @@ package com.example.demo.user;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -10,7 +11,7 @@ public class User {
 	private Integer id;
 	@Size(min = 4, message = "Name should have 4 charecters")
 	private String name;
-	@Past
+	@Past(message= "Should be Today or Past and not future date") @NotNull
 	private Date dob;
 	
 	public User() {

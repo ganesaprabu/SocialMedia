@@ -47,12 +47,6 @@
 		    <artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>		
 		
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger2</artifactId>
-		    <version>2.9.2</version>
-		</dependency>
-		
 		<!-- Added the below 2 dependencies for the Swagger -->
 				<dependency>
 				    <groupId>io.springfox</groupId>

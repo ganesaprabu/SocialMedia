@@ -51,12 +51,14 @@ public class VersioningController {
 	/*
 	 * Content Negotiation Versioning or produces starts
 	 * */
-	@GetMapping(value = "/persons", produces = "application/vnd.company.app-v1+json")
+	@GetMapping(value = "/persons", 
+			produces = "application/vnd.company.app-v1+json")
 	public PersonV1 getPersonV1ContentNegotiation() {
 		return new PersonV1("Sachin Tendulkar"); 
 	}
 	
-	@GetMapping(value = "/persons", produces = "application/vnd.company.app-v2+json")
+	@GetMapping(value = "/persons", 
+			produces = "application/vnd.company.app-v2+json")
 	public PersonV2 getPersonV2ContentNegotiation() {
 		return new PersonV2(new Name("Sachin", "Tendulkar")); 
 	}

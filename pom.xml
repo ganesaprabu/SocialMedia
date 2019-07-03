@@ -61,6 +61,18 @@
 				</dependency>
 		<!-- Added the above 2 dependencies for the Swagger -->				
 
+
+		<!-- The below dependency is for Actuator -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- Actuator output will be the Hal format and hence we can add the below dependency to view the output in the Browser -->
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-rest-hal-browser</artifactId>
+		</dependency>
+
 		
 		<dependency>
 			<groupId>com.h2database</groupId>

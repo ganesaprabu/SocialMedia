@@ -43,4 +43,11 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), "Validation fails", ex.getBindingResult().toString());
 		return handleExceptionInternal(ex, exceptionResponse, headers, status, request);
 	}	
+	
+	//This is specific only to PostNotFoundException 
+	@ExceptionHandler(PostNotFoundException.class)
+	public ResponseEntity handlePostException(Exception ex, WebRequest request) throws Exception {
+		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
+		return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
 }

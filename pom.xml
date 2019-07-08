@@ -71,11 +71,11 @@
 		</dependency>
 
 		<!-- 
-		Commenting temporarily to make call without the basic authentication
+		Commenting temporarily to make call without the basic authentication-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency> -->
+		</dependency> 
 		
 		
 		<!-- JPA and H2 inmemory database -->
